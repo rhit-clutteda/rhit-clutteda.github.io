@@ -1,12 +1,26 @@
 <html>
-	<head>
-		<title>TODO</title>
-	</head>
+<head>
+	<title>TODO</title>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+</head>
+
+<script defer>
+jQuery.get("navbar.html", function(data){
+    jQuery("#navbar-placeholder").replaceWith(data);
+});
+jQuery.get("footer.html", function(data){
+    jQuery("#footer-placeholder").replaceWith(data);
+});
+</script>
 
 <body>
-
+    <div id="navbar-placeholder"></div>
     <mark>TODO: implement your portfolio.</mark>
 
 </body>
+
+<footer>
+    <div id="footer-placeholder"></div>
+</footer>
 
 </html>
