@@ -1,12 +1,30 @@
 <html>
-	<head>
-		<title>TODO</title>
-	</head>
+
+<head>
+	<title>David Clutter</title>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+</head>
+
+<!-- Learned this from StackOverflow:
+    https://stackoverflow.com/questions/31954089/how-can-i-reuse-a-navigation-bar-on-multiple-pages
+-->
+<script defer>
+jQuery.get("navbar.html", function(data){
+    jQuery("#navbar-placeholder").replaceWith(data);
+});
+jQuery.get("footer.html", function(data){
+    jQuery("#footer-placeholder").replaceWith(data);
+});
+</script>
 
 <body>
-
+    <div id="navbar-placeholder"></div>
     <mark>TODO: implement your main page.</mark>
 
 </body>
+
+<footer>
+    <div id="footer-placeholder"></div>
+</footer>
 
 </html>
