@@ -2,6 +2,8 @@
     I was rather unsure of what to do, so I decided to do something a bit odd.  I found that one
     might want to zoom into my larger fractal image, so I added a way to zoom in by reading the value from
     a slider and multiplying the width of the image by that value.
+
+    It's kind of stupid, but oddly fun.
 */
 
 // Set element variables
