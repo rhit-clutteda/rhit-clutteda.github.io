@@ -70,3 +70,12 @@ header a {
 header a:visited {
     color: var(--visited-link-on-dark);
 }
+
+
+.zoom-slider {
+    --slider-value: 10%;
+}
+
+.zoom-image {
+    width: var(--slider-value);
+}

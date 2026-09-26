@@ -10,6 +10,7 @@
         jQuery("#footer-placeholder").replaceWith(data);
     });
     </script>
+    <script src="comparison-slider.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -27,7 +28,14 @@
         </section>
         <section>
             <h2>Fractal Renderer Part 2</h2>
-            <img src="images/x:-0.726847_y:0.194259_z:243.649_i:1000_ss:8.png">
+            <img src="images/x:-0.726847_y:0.194259_z:243.649_i:1000_ss:8.png" class="zoom-image">
+            <!-- Learned slider approach from https://muffinman.io/blog/image-comparison-slider/-->
+            <div class="zoom-slider">
+                <label for="zoom-slider-input">
+                    Before and after supersampling
+                </label>
+                <input type="range" id="zoom-slider-input">
+            </div>
             <p>Technology: C++</p>
             <p>Repo: <a href="https://github.com/sparkworm/MandelbrotViewer">Github</a></p>
             <p>I created this as a follow up to my first renderer so that I might have greater precision.  It runs on the CPU, giving me access to much greater precision.  It uses a basic png encoder, <a href="https://github.com/lvandeve/lodepng">lodepng</a>, to produce images as output.</p>
