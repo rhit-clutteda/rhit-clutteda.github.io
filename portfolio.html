@@ -1,26 +1,46 @@
 <html>
 <head>
-	<title>TODO</title>
+	<title>David Clutter - Portfolio</title>
     <script src="//code.jquery.com/jquery.min.js"></script>
+    <script defer>
+    jQuery.get("navbar.html", function(data){
+        jQuery("#navbar-placeholder").replaceWith(data);
+    });
+    jQuery.get("footer.html", function(data){
+        jQuery("#footer-placeholder").replaceWith(data);
+    });
+    </script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<script defer>
-jQuery.get("navbar.html", function(data){
-    jQuery("#navbar-placeholder").replaceWith(data);
-});
-jQuery.get("footer.html", function(data){
-    jQuery("#footer-placeholder").replaceWith(data);
-});
-</script>
+
 
 <body>
     <div id="navbar-placeholder"></div>
-    <mark>TODO: implement your portfolio.</mark>
+    <h1>Project Showcase</h1>
+    <main>
+        <section>
+            <h2>Fractal Renderer Part 1</h2>
+            <img src="images/MandelBrot_Godot_01.png">
+            <p>Technology: <a href="https://godotengine.org">Godot Engine</a></p>
+            <p>I created a renderer for the Mandelbrot set in Godot Engine using the shading language GDShader.  While running as a shader on the GPU made this project fast, I was left unsatisfied with the limited precision I was faced with.</p>
+        </section>
+        <section>
+            <h2>Fractal Renderer Part 2</h2>
+            <img src="images/x:-0.726847_y:0.194259_z:243.649_i:1000_ss:8.png">
+            <p>Technology: C++</p>
+            <p>Repo: <a href="https://github.com/sparkworm/MandelbrotViewer">Github</a></p>
+            <p>I created this as a follow up to my first renderer so that I might have greater precision.  It runs on the CPU, giving me access to much greater precision.  It uses a basic png encoder, <a href="https://github.com/lvandeve/lodepng">lodepng</a>, to produce images as output.</p>
+        </section>
+        <section>
+            <h2>Genetic Algorithm Project</h2>
+            <img src="images/GARP.png">
+            <p>Technology: Java, Swing</p>
+            <p>This was an optional final project for Object Oriented Programming and Design.  I worked on a team of two to create an application in Java that would allow the user to set hyperparameters and run a genetic algorithm to solve a simple pathfinding problem.</p>
+        </section>
+    </main>
 
-</body>
-
-<footer>
     <div id="footer-placeholder"></div>
-</footer>
+</body>
 
 </html>

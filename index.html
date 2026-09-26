@@ -3,28 +3,36 @@
 <head>
 	<title>David Clutter</title>
     <script src="//code.jquery.com/jquery.min.js"></script>
+    <!-- Learned this from StackOverflow:
+    https://stackoverflow.com/questions/31954089/how-can-i-reuse-a-navigation-bar-on-multiple-pages
+    -->
+    <script defer>
+    jQuery.get("navbar.html", function(data){
+        jQuery("#navbar-placeholder").replaceWith(data);
+    });
+    jQuery.get("footer.html", function(data){
+        jQuery("#footer-placeholder").replaceWith(data);
+    });
+    </script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<!-- Learned this from StackOverflow:
-    https://stackoverflow.com/questions/31954089/how-can-i-reuse-a-navigation-bar-on-multiple-pages
--->
-<script defer>
-jQuery.get("navbar.html", function(data){
-    jQuery("#navbar-placeholder").replaceWith(data);
-});
-jQuery.get("footer.html", function(data){
-    jQuery("#footer-placeholder").replaceWith(data);
-});
-</script>
+
 
 <body>
     <div id="navbar-placeholder"></div>
-    <mark>TODO: implement your main page.</mark>
+    <h1>David Clutter</h1>
+    <main>
+        <section>
+            <h2>Contact</h2>
+            <p><strong>Phone number:</strong> 812-760-8549</p>
+            <p><strong>Email:</strong> clutteda@rose-hulman.edu</p>
+        </section>
+        <img src="images/me.png">
+    </main>
 
+    <div id="footer-placeholder"></div>
 </body>
 
-<footer>
-    <div id="footer-placeholder"></div>
-</footer>
 
 </html>

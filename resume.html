@@ -1,26 +1,93 @@
 <html>
 
 <head>
-	<title>TODO</title>
+	<title>David Clutter - Resume</title>
     <script src="//code.jquery.com/jquery.min.js"></script>
+    <script defer>
+        jQuery.get("navbar.html", function(data){
+            jQuery("#navbar-placeholder").replaceWith(data);
+        });
+        jQuery.get("footer.html", function(data){
+            jQuery("#footer-placeholder").replaceWith(data);
+        });
+    </script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<script defer>
-jQuery.get("navbar.html", function(data){
-    jQuery("#navbar-placeholder").replaceWith(data);
-});
-jQuery.get("footer.html", function(data){
-    jQuery("#footer-placeholder").replaceWith(data);
-});
-</script>
+
 
 <body>
     <div id="navbar-placeholder"></div>
-    <mark>TODO: implement your resume.</mark>
-</body>
+    <h1>Resume</h1>
+    <main>
+        <section>
+            <h2>Skills</h2>
+            
+            <h3>Languages</h3>
+            <ul>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Racket</li>
+            </ul>
+        </section>
 
-<footer>
+        <section>
+            <h2>Experience</h2>
+            <h3>Internship</h3>
+            <p><em>Currently looking for one!</em></p>
+            <h3>Teacher's Assistant</h3>
+            <p>I helped students in class for Object Oriented Programming and Design class under Dr. Ludden during the Fall of 2026.  I also performed quality assurance on testing materials and graded student design problems.</p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <h3>College</h3>
+            <p class="school-name">Rose-Hulman Institute of Technology</p>
+            <p class="location">Terre Haute, Indiana</p>
+            <p class="gpa">GPA: 4.0</p>
+            <h4>Honors Recieved</h4>
+            <ul>
+                <li>Dean's List</li>
+            </ul>
+
+            <h4>Classes Taken</h4>
+            <ul>
+                <li>Object Oriented Programming and Design</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Introduction to Web Programming</li>
+                <li>Programming Language Concepts</li>
+                <li>Artificial Intelligence</li>
+                <li>Operating Systems</li>
+                <li>Computer Architecture</li>
+                <li>Introduction to Systems Programming</li>
+                <li>Combinatorics</li>
+            </ul>
+
+
+            <h3>High School</h3>
+            <p class="school-name">Signature School</p>
+            <p class="location">Evansville, Indiana</p>
+            <p class="gpa">GPA: 4.0</p>
+            <h4>Honors Recieved</h4>
+            <ul>
+                <li>Valedictorian</li>
+                <li>National Merit Scholar Finalist</li>
+                <li>IB Diploma</li>
+                <li>AP Scholar with Distinction</li>
+            </ul>
+            <h4>Club Participation</h4>
+            <h5>Programming Club</h5>
+            <p class="timeframe">2024-2025</p>
+            <p>I acted as President of the fledgling Programming club, organizing our weekly meetings.  As most members weren't very experienced in programming, I decided to make the club educational; I would create a slideshow each meeting to explain a programming concept through the context of game developement using <a href="https://godotengine.org">Godot Engine</a>.</p>
+            <h5>German Club</h5>
+            <p class="timeframe">2021-2025</p>
+            <p>I was a member of German Language Club, and served as Treasurer during the 2023-2024 school year.</p>
+        </section>
+    </main>
+
     <div id="footer-placeholder"></div>
-</footer>
+</body>
 
 </html>
