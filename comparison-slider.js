@@ -13,9 +13,6 @@ let image = document.querySelector('.zoom-image')
 
 // listen for inputs and update
 input.addEventListener('input', () => {
-  zoomSlider.style.setProperty('--slider-value', `${input.value}%`);
-  console.log(input.value)
-  console.log()
   image.style.width = Math.max(10, input.value * 10)
 });
 
